@@ -36,6 +36,15 @@ Go to [next-auth.js.org](https://next-auth.js.org) for more information and docu
 
 ## Getting Started
 
+#### programs to install
+- node.js v10.16.3 and above (Please check ur node.js and install the latest version, as this version came in NOV 2021)
+
+
+
+#### NPM global files to install
+- npm i -g typeorm
+
+
 ### 1. Clone the repository and install dependencies
 
 ```
@@ -106,6 +115,12 @@ vc env add NEXTAUTH_URL production
 
 Do not forget to set the environment variables for the Client ID and Client Secret values for all your configured authentication providers in your hosting providers dashboard, i.e. with Vercel as described above.
 
+#### Deploy on Vercel (old documentation)
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
 ## Acknowledgements
 
 <a href="https://vercel.com?utm_source=nextauthjs&utm_campaign=oss">
@@ -113,7 +128,12 @@ Do not forget to set the environment variables for the Client ID and Client Secr
 </a>
 <p align="left">Thanks to Vercel sponsoring this project by allowing it to be deployed for free for the entire NextAuth.js Team</p>
 
-## License
+## Learn More
 
-ISC
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
