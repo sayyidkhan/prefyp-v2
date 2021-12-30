@@ -26,7 +26,16 @@ This is an example application which shows how `next-auth` is applied to a basic
 
 It can be found at [`next-auth-example.vercel.app`](https://next-auth-example.vercel.app/)
 
-### About NextAuth.js
+#### Technology Stack
+
+- Frontend: React JS + Next.JS
+- Backend: Express + Next.JS
+- Database: Postgres
+- Cloud Provider:
+  1. Vercel - Hosting the backend and frontend
+  2. AWS - AWS RDS, For database storage
+
+#### About NextAuth.js
 
 NextAuth.js is an easy to implement, full-stack (client/server) open source authentication library designed for [Next.js](https://nextjs.org) and [Serverless](https://vercel.com).
 
