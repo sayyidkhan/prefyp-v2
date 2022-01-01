@@ -7,6 +7,8 @@ import Auth0Provider from "next-auth/providers/auth0"
 import CredentialProvider from "next-auth/providers/credentials"
 // import AppleProvider from "next-auth/providers/apple"
 // import EmailProvider from "next-auth/providers/email"
+import bcrypt from 'bcrypt'
+
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
@@ -24,8 +26,11 @@ export default NextAuth({
         password: { label: "Password", type: "password" }
       },
       authorize: (credential) => {
-        // database lookup
-        if (credential.username === "john" && credential.password === "test") {
+        
+        const username = credential.username;
+        const password = credential.password;
+        // todo: database lookup
+        if (username === "john" && password === "test") {
           return {
             id: 2,
             name: "john",
@@ -116,3 +121,24 @@ export default NextAuth({
   // Enable debug messages in the console if you are having problems
   debug: true,
 })
+
+const loginUser = async ({user, password}) => {
+  if(!user.password) {
+    throw new Error("Accounts Have to login with password.");
+  }
+
+  const isMatch = await bcrypt.compare(password, user.password);
+  if(!isMatch) {
+    throw new Error("Password Incorrect.");
+  }
+  
+  return user;
+};
+
+const registerUser = async({email, password}) => {
+  const saltRounds = 10;
+  const hashPass = await bcrypt.hash(password, saltRounds)
+  // save the record into the database
+  // const newUser = new Users({ email, password: hashPass })
+  // await newUser.save()
+}

@@ -6,7 +6,7 @@
   "repository": "https://github.com/nextauthjs/next-auth-example.git",
   "homepage": "http://next-auth-example.now.sh",
   "scripts": {
-    "del:node_modules" : "rm -rf node_modules",
+    "del:node_modules": "rm -rf node_modules",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -16,6 +16,7 @@
     "sayyid khan"
   ],
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "next": "^12.0.7",
     "next-auth": "latest",
     "nodemailer": "^6.6.3",
