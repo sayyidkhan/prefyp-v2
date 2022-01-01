@@ -112,9 +112,15 @@ npm run start
 
 ### 5. Preparing for Production
 
-You must set the `NEXTAUTH_URL` environment variable with the URL of your site, before deploying to production.
+##### Deploy on Vercel
 
-e.g. in your `.env.local` file - `NEXTAUTH_URL=https://example.com`
+1. Upload your code to github repository first (master branch)
+2. Configure your project on vercel and define the project name
+3. You must set the `NEXTAUTH_URL` environment variable with the URL of your site, before deploying to production.
+   e.g. in your `.env.local` file - `NEXTAUTH_URL=https://example.com` or `https://PROJECTNAME.vercel.app`
+4. You must set the `SECRET` environment variable with the URL of your site, before deploying to production.
+
+2. 
 
 To do this with Vercel, you can use the [Vercel project dashboard](https://vercel.com/dashboard) or their cli via the `vc env` command:
 
@@ -124,7 +130,7 @@ vc env add NEXTAUTH_URL production
 
 Do not forget to set the environment variables for the Client ID and Client Secret values for all your configured authentication providers in your hosting providers dashboard, i.e. with Vercel as described above.
 
-#### Deploy on Vercel (old documentation)
+
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
